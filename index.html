@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BioMaroc - Accueil</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="container nav">
+    <div class="logo">BioMaroc</div>
+    <nav>
+      <a href="#home">Accueil</a>
+      <a href="#products">Produits</a>
+      <a href="#panier">Panier</a>
+      <a href="login.html">Admin</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <p class="badge">100% Naturel</p>
+      <h1>Produits bio inspirés du terroir marocain</h1>
+      <p class="subtitle">Huiles naturelles, miels traditionnels et soins bio dans une boutique moderne.</p>
+      <a href="#products" class="btn">Voir les produits</a>
+    </div>
+    <div class="hero-card">
+      <h3>Produit vedette</h3>
+      <p>Huile de Figue</p>
+      <span>34 €</span>
+    </div>
+  </div>
+</section>
+
+<div id="message-panier" class="message-panier"></div>
+
+<section class="products container" id="products">
+  <div class="section-head">
+    <p class="mini">Nos meilleures offres</p>
+    <h2>Découvrez nos produits</h2>
+  </div>
+
+  <div class="layout-shop">
+    <div class="shop-left">
+      <div class="product-grid">
+        <div class="product-card"><img src="assets/images/figue.svg" alt="Huile de Figue"><div class="product-content"><h3>Huile de Figue</h3><p>Produit naturel premium pour peau et cheveux.</p><div class="price">34 €</div><button class="btn" onclick="ajouterProduit('Huile de Figue', 34)">Ajouter au panier</button></div></div>
+        <div class="product-card"><img src="assets/images/argan.svg" alt="Huile d'Argan"><div class="product-content"><h3>Huile d'Argan</h3><p>Soin nourrissant naturel inspiré du Maroc.</p><div class="price">24.90 €</div><button class="btn" onclick='ajouterProduit("Huile d&apos;Argan", 24.90)'>Ajouter au panier</button></div></div>
+        <div class="product-card"><img src="assets/images/olive.svg" alt="Huile d'Olive"><div class="product-content"><h3>Huile d'Olive</h3><p>Huile extra vierge de qualité.</p><div class="price">19 €</div><button class="btn" onclick='ajouterProduit("Huile d&apos;Olive", 19)'>Ajouter au panier</button></div></div>
+        <div class="product-card"><img src="assets/images/origan.svg" alt="Miel d'Origan"><div class="product-content"><h3>Miel d'Origan</h3><p>Miel naturel pur et traditionnel.</p><div class="price">50 €</div><button class="btn" onclick='ajouterProduit("Miel d&apos;Origan", 50)'>Ajouter au panier</button></div></div>
+        <div class="product-card"><img src="assets/images/euphorbe.svg" alt="Miel d'Euphorbe"><div class="product-content"><h3>Miel d'Euphorbe</h3><p>Miel marocain de haute qualité.</p><div class="price">45 €</div><button class="btn" onclick='ajouterProduit("Miel d&apos;Euphorbe", 45)'>Ajouter au panier</button></div></div>
+        <div class="product-card"><img src="assets/images/eucalyptus.svg" alt="Miel d'Eucalyptus"><div class="product-content"><h3>Miel d'Eucalyptus</h3><p>Produit 100% bio et naturel.</p><div class="price">32 €</div><button class="btn" onclick='ajouterProduit("Miel d&apos;Eucalyptus", 32)'>Ajouter au panier</button></div></div>
+        <div class="product-card"><img src="assets/images/menthe.svg" alt="Huile Menthe Poivrée"><div class="product-content"><h3>Huile Menthe Poivrée</h3><p>Huile essentielle naturelle.</p><div class="price">6 €</div><button class="btn" onclick="ajouterProduit('Huile Menthe Poivrée', 6)">Ajouter au panier</button></div></div>
+        <div class="product-card"><img src="assets/images/fenugrec.svg" alt="Huile Fenugrec"><div class="product-content"><h3>Huile Fenugrec</h3><p>Huile naturelle pour cheveux.</p><div class="price">10 €</div><button class="btn" onclick="ajouterProduit('Huile Fenugrec', 10)">Ajouter au panier</button></div></div>
+        <div class="product-card"><img src="assets/images/amande.svg" alt="Huile Amande Douce"><div class="product-content"><h3>Huile Amande Douce</h3><p>Soigne et nourrit la peau.</p><div class="price">8 €</div><button class="btn" onclick="ajouterProduit('Huile Amande Douce', 8)">Ajouter au panier</button></div></div>
+      </div>
+    </div>
+
+    <aside class="panier-box" id="panier">
+      <h3>🛒 Panier</h3>
+      <p class="panier-count">Produits: <span id="panier-count">0</span></p>
+      <div id="panier-vide" class="panier-vide">Aucun produit dans le panier.</div>
+      <div id="panier-list"></div>
+      <div class="panier-total">Total: <span id="panier-total">0.00</span> €</div>
+      <button class="btn btn-clear" onclick="viderPanier()">Vider le panier</button>
+    </aside>
+  </div>
+</section>
+
+<footer class="footer"><div class="container"><h3>BioMaroc</h3><p>Boutique bio avec panier, login et dashboard admin.</p></div></footer>
+<script src="assets/app.js"></script>
+</body>
+</html>
